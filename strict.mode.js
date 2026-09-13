@@ -95,3 +95,38 @@ function applyDiscount(price, discountPercentage){
 }
 console.log(applyDiscount(10000, 10));
 
+
+
+let userName = 'admin';
+let password = '1234';
+
+function login(userName, passsword) {
+    if(userName === "admin" && password === "1234"){
+        console.log("login successful");
+    }else{
+        console.log("invalid userName or passsword");
+    }
+}
+
+login("admin", "1234");
+
+
+function getGrade(score) {
+    if(score >= 80) {
+        return"A";
+    }else if(score >= 70) {
+        return"B";
+    }else if(score >= 60) {
+        return"C";
+    }else if(score >= 50) {
+        return"D";
+    }else{
+        return"F";
+    }
+}
+
+console.log(getGrade(85));
+console.log(getGrade(73));
+console.log(getGrade(65));
+console.log(getGrade(55));
+console.log(getGrade(40));
