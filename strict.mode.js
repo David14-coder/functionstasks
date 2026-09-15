@@ -134,20 +134,59 @@
 
 
 
-let users = [
-    "victor",
-    "john",
-    "mary",
-    "david"
-]
+// let users = [
+//     "victor",ñ
+//     "john",
+//     "mary",
+//     "david"
+// ]
 
-function findUser(users, username) {
-    if(users.includes("mary")){
-        return "user found";
+// function findUser(users, username) {
+//     if(users.includes("mary")){
+//         return "user found";
+//     }else{
+//         return"user not found";
+//     }
+// }
+
+// console.log(findUser("mary"));
+// console.log(findUser("peter")); 
+
+
+let balance = 50000;
+let transactions = [];
+
+function checkBalance(){
+    return "balance";
+}
+console.log(balance);
+
+function deposit(amount) {
+    balance = balance + amount;
+    transactions.push(`deposited ${amount}`);
+        return "deposit successful";
+}
+
+function withdraw(amount) {
+    if (amount <= balance) {
+        balance = balance - amount;
+        transactions.push(`withdraw ${amount}`);
+        return "withdraw successful";
     }else{
-        return"user not found";
+        return "insufficient balance";
     }
 }
 
-console.log(findUser("mary"));
-console.log(findUser("peter")); 
+function viewTransactions(){
+    return transactions;
+}
+
+console.log(checkBalance ());
+console.log(deposit (10000));
+console.log(checkBalance());
+
+console.log(withdraw (5000));
+console.log(checkBalance());
+
+console.log(viewTransactions());
+
